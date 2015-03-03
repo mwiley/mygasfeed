@@ -3,9 +3,10 @@ module Mygasfeed
   class << self
 
     # Retrieves nearby gas stations according to a user's geo location.
-    #   Input: longitude, latitude
-    def get_stations latitude, longitude
-
+    #   Input: longitude, latitude, distance, fuel_type, sort_by
+    def get_stations params={}
+        response = request "/stations/radius/", params
+        response['stations'].map { |station| Station.build station }
     end
 
   end
