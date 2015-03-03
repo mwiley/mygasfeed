@@ -6,7 +6,7 @@ require 'mygasfeed/version'
 Gem::Specification.new do |spec|
   spec.name          = "mygasfeed"
   spec.version       = Mygasfeed::VERSION
-  spec.authors       = ["mwiley"]
+  spec.authors       = ["Mason Wiley"]
   spec.email         = ["masonwiley92@gmail.com"]
 
   if spec.respond_to?(:metadata)
