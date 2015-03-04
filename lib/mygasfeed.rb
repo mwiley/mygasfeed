@@ -1,5 +1,6 @@
 require "mygasfeed/version"
 require "mygasfeed/request"
+require "mygasfeed/resources/base_struct.rb"
 Dir[File.dirname(__FILE__) + "/mygasfeed/dsl/*.rb"].each { |f| require f  }
 Dir[File.dirname(__FILE__) + "/mygasfeed/resources/*.rb"].each { |f| require f  }
 
