@@ -5,19 +5,15 @@ module Mygasfeed
 
   class << self
 
-    def request path, params={}
-      params.merge! cmd:cmd
-      response = HTTParty.get _build_url(params)
-      response.parsed_response
+    def request path, params
+      response = HTTParty.get _build_url(path, params)
+      JSON.parse response.body
     end
 
-    def _build_url path, params={}
-      uri = Addressable::URI.parse API_URL
-      url.path = path
-      uri.query_values = params
-      uri.basename = API_KEY
-      url.extname = 'json'
-      uri.to_s
+    def _build_url path, params
+      uri = API_URL + path
+      params.each { |param| uri = uri + param.to_s + '/' }
+      uri = uri + API_KEY + ".json"
     end
 
   end
