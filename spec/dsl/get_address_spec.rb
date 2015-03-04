@@ -13,7 +13,7 @@ describe Mygasfeed do
         it { should be_an Object }
 
         it "should contain Mygasfeed:Location objects" do
-          subject.should be_a Mygasfeed::Location
+          expect(subject).to be_a(Mygasfeed::Location)
         end
       end
     end

@@ -14,7 +14,7 @@ describe Mygasfeed do
         it { should_not be_empty }
 
         it "should contain Mygasfeed:Station objects" do
-          subject.first.should be_a Mygasfeed::Station
+          expect(subject.first).to be_a(Mygasfeed::Station)
         end
       end
     end
