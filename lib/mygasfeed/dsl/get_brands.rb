@@ -5,7 +5,7 @@ module Mygasfeed
     # Retrieves a list of all gas station brands.
     def get_brands
       response = request "/stations/brands/"
-      response['stations'].map { |station| Station.build station }
+      response['stations'].map { |brand| Brand.build brand }
     end
 
   end
