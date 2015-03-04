@@ -12,7 +12,7 @@ describe Mygasfeed do
       context 'when request succeeds' do
         it { should be_an Object }
 
-        it "should contain Mygasfeed:Location objects" do
+        it "should be a Mygasfeed:Location object" do
           expect(subject).to be_a(Mygasfeed::Location)
         end
       end
