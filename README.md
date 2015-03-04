@@ -37,7 +37,10 @@ Or store it in a `.env` file and either use [Foreman](https://github.com/ddollar
 ## Usage
 
 ### Get nearby stations
-**Params:** latitude, longitude, distance, fuel_type, sort_by
+**Params:** latitude, longitude, distance, fuel_type, sort_by  
+distance - number of miles  
+fuel_type - "reg", "mid", "pre", or "diesel".  
+sort_by - "distance" or "price".
 
     Mygasfeed.get_stations 39.7400, -121.8356, 50, "reg", "distance"
 
@@ -57,9 +60,10 @@ Or store it in a `.env` file and either use [Foreman](https://github.com/ddollar
     Mygasfeed.get_brands
 
 ### Update a gas price
-**Params:** price, fuel_type, station_id
+**Params:** price, fuel_type, station_id  
+fuel_type - "reg", "mid", "pre", or "diesel".
 
-    Mygasfeed 4.15, "reg", 33862
+    Mygasfeed.update_price 4.15, "reg", 33862
 
 ### Get an address by latitude and longitude
 **Params:** latitude, longitude
@@ -67,7 +71,8 @@ Or store it in a `.env` file and either use [Foreman](https://github.com/ddollar
     Mygasfeed.get_adddress 39.7400, -121.8356
 
 ### Get stations close by another station
-**Params:** station_id, limit
+**Params:** station_id, limit  
+limit - number of miles
 
     Mygasfeed.get_close_by 33862, 50
 
