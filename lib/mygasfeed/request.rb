@@ -15,7 +15,6 @@ module Mygasfeed
       JSON.parse response.body
     end
 
-  private
     def _build_url path, params=[]
       uri = API_URL + path
       params.each { |param| uri = uri + param.to_s + '/' }
