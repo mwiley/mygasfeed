@@ -8,10 +8,7 @@ describe Mygasfeed do
       let(:lat)  { 45.5092499 }
       let(:lng)  { -73.7167247 }
 
-
       context 'when request succeeds' do
-        it { should be_an Object }
-
         it "should be a Mygasfeed:Location object" do
           expect(subject).to be_a(Mygasfeed::Location)
         end

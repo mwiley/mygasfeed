@@ -10,8 +10,6 @@ describe Mygasfeed do
       let(:station_id)  { 110244 }
 
       context 'when request succeeds' do
-        it { should be_an Object }
-
         it "should be a Mygasfeed:Station object" do
           expect(subject).to be_a(Mygasfeed::Station)
         end
